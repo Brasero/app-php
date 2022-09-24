@@ -1,0 +1,25 @@
+{
+    "name": "brasero/php-framework",
+    "type": "project",
+    "autoload" : {
+        "psr-4" : {
+            "Module\\" : "src/Module/",
+            "App\\" : "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "brasero",
+            "email": "brandonricci4@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "require": {
+        "guzzlehttp/psr7": "^2.4",
+        "http-interop/response-sender": "^1.0",
+        "zendframework/zend-expressive-fastroute": "1.2.0"
+    }
+}
