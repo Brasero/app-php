@@ -1,12 +1,35 @@
 <?php
 namespace Module;
 
-class Renderer
+use Module\Renderer\RendererInterface;
+
+class Renderer implements RendererInterface
 {
 
     const DEFAULT_NAMESPACE = '__MAIN';
 
     private $paths = [];
+
+    private $globals = [];
+
+    public function __construct(?string $defaultPath = null)
+    {
+        if (!is_null($defaultPath)) {
+            $this->addPath($defaultPath);
+        }
+    }
+
+    /**
+     * Ajoute des variable globals à toute les vues
+     *
+     * @param string $key Clé
+     * @param mixed $value Valeur
+     * @return void
+     */
+    public function addGlobal(string $key, $value): void
+    {
+        $this->globals[$key] = $value;
+    }
 
     public function addPath(string $namespace, ?string $path = null): void
     {
@@ -27,10 +50,10 @@ class Renderer
         }
 
         ob_start();
+        $renderer = $this;
+        extract($this->globals);
         extract($params);
-        require('../views/header.php');
         require($path);
-        require('../views/footer.php');
         return ob_get_clean();
     }
 

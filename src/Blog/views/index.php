@@ -1,11 +1,11 @@
-<?php //include header ?>
+<?= $renderer->render('header'); ?>
 
 <h1>Bienvenue sur mon Blog</h1>
 
 
 <ul>
     <li>
-        Article 1
+        <a href="<?= $routeur->generateUrl('blog.show', ['slug' => 'mon-article-a']); ?>">Mon article a</a>
     </li>
     <li>
         Article 1
@@ -22,4 +22,4 @@
 </ul>
 
 
-<?php //include footer ?>
+<?= $renderer->render('footer'); ?>

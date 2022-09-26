@@ -9,12 +9,7 @@
 <body>
     <header>
         <nav>
-            <?php foreach($this->paths as $route): ?>
-                <a href="<?= $router->generateUri($route); ?>">
-                    <button>
-                        <?= $route ?>
-                    </button>
-                </a>
-            <?php endforeach; ?>
+            <a href="<?= $routeur->generateUrl('accueil.index'); ?>">Accueil</a>
+            <a href="<?= $routeur->generateUrl('blog.index'); ?>">Blog</a>
         </nav>
     </header>

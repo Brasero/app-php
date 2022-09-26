@@ -67,7 +67,7 @@ class Routeur
         return null;
     }
 
-    public function generateUrl(string $name, array $params): ?string
+    public function generateUrl(string $name, ?array $params = []): ?string
     {
         return $this->routeur->generateUri($name, $params);
     }

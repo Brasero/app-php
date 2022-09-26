@@ -3,6 +3,7 @@ namespace App\Accueil;
 
 use Module\Routeur;
 use Module\Renderer;
+use Module\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 class AccueilModule
@@ -10,9 +11,9 @@ class AccueilModule
 
     private $renderer;
 
-    public function __construct(Routeur $routeur)
+    public function __construct(Routeur $routeur, RendererInterface $renderer)
     {
-        $this->renderer = new Renderer();
+        $this->renderer = $renderer;
         $this->renderer->addPath('accueil', __DIR__.'/views');
         $routeur->get('/', [$this, 'index'], 'accueil.index');
     }
