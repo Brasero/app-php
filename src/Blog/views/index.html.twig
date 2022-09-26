@@ -1,0 +1,39 @@
+{% extends 'layout.html.twig' %}
+
+{% block title "Le blog" %}
+
+{% block body %}
+
+    <h1>Bienvenue sur mon Blog</h1>
+
+
+    <ul>
+        <li>
+            <a 
+                href={{ 
+                    routeur.generateUrl(
+                        'blog.show', 
+                        {
+                            slug: 'mon-article'
+                        }
+                    ) 
+                }}
+            >
+                Mon article
+            </a>
+        </li>
+        <li>
+            Article 1
+        </li>
+        <li>
+            Article 1
+        </li>
+        <li>
+            Article 1
+        </li>
+        <li>
+            Article 1
+        </li>
+    </ul>
+
+{% endblock %}

@@ -3,7 +3,7 @@
         'name' => 'brasero/php-framework',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '5b547e00440c8a5079d6cc07117a9e791b8907c0',
+        'reference' => '128b2ec584df42aecf7300895c878c2654e4b2e0',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'brasero/php-framework' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '5b547e00440c8a5079d6cc07117a9e791b8907c0',
+            'reference' => '128b2ec584df42aecf7300895c878c2654e4b2e0',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

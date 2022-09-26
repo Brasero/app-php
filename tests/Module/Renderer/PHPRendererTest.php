@@ -1,9 +1,10 @@
 <?php
+namespace Tests\Module\Renderer;
 
-use Module\Renderer;
 use PHPUnit\Framework\TestCase;
+use Module\Renderer\PHPRenderer;
 
-class RendererTest extends TestCase
+class PHPRendererTest extends TestCase
 {
 
     /**
@@ -13,7 +14,7 @@ class RendererTest extends TestCase
 
     public function setUp(): void
     {
-        $this->renderer = new Renderer();
+        $this->renderer = new PHPRenderer();
         $this->renderer->addPath(__DIR__ . '/views');
     }
 

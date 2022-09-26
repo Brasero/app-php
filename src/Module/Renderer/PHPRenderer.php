@@ -1,9 +1,7 @@
 <?php
-namespace Module;
+namespace Module\Renderer;
 
-use Module\Renderer\RendererInterface;
-
-class Renderer implements RendererInterface
+class PHPRenderer implements RendererInterface
 {
 
     const DEFAULT_NAMESPACE = '__MAIN';

@@ -2,7 +2,6 @@
 namespace App\Blog;
 
 use Module\Routeur;
-use Module\Renderer;
 use Module\Renderer\RendererInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
